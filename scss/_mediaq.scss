@@ -1,0 +1,149 @@
+/*destok*/
+@media (min-width: 992.98px) and (max-width: 1400px) {
+    body {
+        background: pink;
+    }
+}
+
+@mixin cuerpo {
+    body {
+        background: rgba(160, 30, 106, 0.815);
+        font-size: 4rem;
+        border: solid white 1px;
+    }
+}
+
+/*tablet*/
+@media (min-width: 576.98px) and (max-width: 991.98px) {
+    @include cuerpo;
+
+    #gridHome {
+        display: grid;
+        grid-template-areas:
+            "menu menu menu"
+            "titulo titulo titulo"
+            "carousel carousel carousel"
+            "info info info"
+            "info info info"
+            "info info info"
+            "footer footer footer";
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+    }
+
+    #gridDondeEstamos {
+        display: grid;
+        grid-template-areas:
+            "menu menu menu"
+            "titulo titulo titulo"
+            "ubicacion ubicacion ubicacion"
+            "mapa mapa mapa"
+            "direccion localExterior localExterior"
+            "fotos fotos fotos"
+            "footer footer footer";
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+
+    }
+    .fotos{
+        display: none;
+    }
+    
+    /*Quienes Somos*/
+    #gridQuienes {
+        display: grid;
+        grid-template-areas:
+            "menu menu menu"
+            "titulo titulo titulo"
+            "encabezado encabezado encabezado"
+            "parrafo1 parrafo1 parrafo1"
+            "parrafo2 parrafo2 parrafo2"
+            "footer footer footer";
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+    }
+
+
+
+    /*Experiencia*/
+    #gridExperiencia {
+        display: grid;
+        grid-template-areas:
+            "menu menu menu"
+            "titulo titulo titulo"
+            "video video video"
+            "textExp2 textExp2 textExp2"
+            "footer footer footer";
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+    }
+}
+
+/*smartphone*/
+@media screen and (max-width: 575.98px) {
+    @include cuerpo;
+
+    #gridHome {
+        display: grid;
+        grid-template-areas:
+            "menu menu menu"
+            "titulo titulo titulo"
+            "carousel carousel carousel"
+            "info info info"
+            "info info info"
+            "info info info"
+            "footer footer footer";
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+    }
+
+    #gridDondeEstamos {
+        display: grid;
+        grid-template-areas:
+            "menu menu menu"
+            "titulo titulo titulo"
+            "ubicacion ubicacion ubicacion"
+            "mapa mapa mapa"
+            "direccion localExterior localExterior"
+            "fotos fotos fotos"
+            "footer footer footer";
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+
+    }
+    .fotos{
+        display: none;
+    }
+
+    /*Quienes Somos*/
+    #gridQuienes {
+        display: flex;
+        flex-flow: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .encabezado {
+        display: flex;
+        flex-flow: column;
+        padding: 5px;
+        flex-flow: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    /*Experiencia*/
+    #gridExperiencia {
+        display: grid;
+        grid-template-areas:
+            "menu menu menu"
+            "titulo titulo titulo"
+            "video video video"
+            "textExp2 textExp2 textExp2"
+            "footer footer footer";
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+    }
+}
